@@ -2,14 +2,16 @@
 
 one:
   place: MyString
-  price: 1
   img: 
   hname: MyString
-  comment: MyString
+  comment: MyText
+  price: 1
+  sptype: MyString
 
 two:
   place: MyString
-  price: 1
   img: 
   hname: MyString
-  comment: MyString
+  comment: MyText
+  price: 1
+  sptype: MyString

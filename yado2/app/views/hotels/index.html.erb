@@ -1,0 +1,17 @@
+<h2>ようこそユーザーさん</h2>
+<h1>宿ログ</h1>
+<h2>九州のおすすめ温泉宿を検索できます</h2>
+<>
+<% @hotels.each do |hotel| %>
+<p>
+    <%= hotel.hname %>
+    <%= hotel.place %>
+    <br>
+    <%= hotel.comment %>
+    <%= hotel.price %>
+    <%= hotel.sptype %>
+    <%= link_to'削除',"/hotels/#{hotel.id}", method: :delete %>
+    <% end %>
+</p>
+
+<%= link_to'宿を登録', new_hotel_path %>

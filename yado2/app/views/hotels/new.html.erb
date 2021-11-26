@@ -1,10 +1,12 @@
 <%= form_for @hotel, url: {action: :create} do |f| %>
     <%= f.label :hname,'ホテル名'%>
     <%= f.text_field :hname%>
-    <%= f.label :price,'価格'%>
-    <%= f.text_field :price%>
     <%= f.label :place,'県'%>
     <%= f.text_field :place%>
+    <%= f.label :price,'価格'%>
+    <%= f.text_field :price%>
+    <%= f.label :sptype,'温泉の特徴'%>
+    <%= f.text_field :sptype %>
     <%= f.label :comment,'紹介文'%>
     <%= f.text_field :comment%>
     

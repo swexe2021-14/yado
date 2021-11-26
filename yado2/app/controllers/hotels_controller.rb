@@ -12,9 +12,13 @@ class HotelsController < ApplicationController
         hname = params[:hotel][:hname]
         comment = params[:hotel][:comment]
         price = params[:hotel][:price]
-        hotel = Hotel.new(place: place, hname: hname, comment: comment, price: price)
-        hotel.save
-        redirect_to root_path
+        sptype = params[:hotel][:sptype]
+        hotel = Hotel.new(place: place, hname: hname, comment: comment, price: price, sptype: sptype)
+        if hotel.save
+            redirect_to root_path
+        else
+            render'new'
+        end
     end
     
     def destroy
