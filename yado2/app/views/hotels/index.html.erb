@@ -8,8 +8,9 @@
     <%= hotel.place %>
     <br>
     <%= hotel.comment %>
+    </br>
     <%= hotel.price %>
-    <%= hotel.sptype %>
+    <p>温泉の特徴:   <%= hotel.sptype %></p>
     <%= link_to'削除',"/hotels/#{hotel.id}", method: :delete %>
     <% end %>
 </p>
