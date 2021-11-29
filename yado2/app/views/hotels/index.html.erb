@@ -4,13 +4,15 @@
 <>
 <% @hotels.each do |hotel| %>
 <p>
-    <%= hotel.hname %>
+    <%= link_to hotel.hname , "/hotels/#{hotel.id}" %>
+    
     <%= hotel.place %>
     <br>
     <%= hotel.comment %>
     </br>
     <%= hotel.price %>
     <p>温泉の特徴:   <%= hotel.sptype %></p>
+    <%= image_tag "/get_image/#{hotel.id}" %>
     <%= link_to'削除',"/hotels/#{hotel.id}", method: :delete %>
     <% end %>
 </p>

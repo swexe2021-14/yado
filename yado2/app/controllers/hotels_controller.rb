@@ -13,7 +13,8 @@ class HotelsController < ApplicationController
         comment = params[:hotel][:comment]
         price = params[:hotel][:price]
         sptype = params[:hotel][:sptype]
-        hotel = Hotel.new(place: place, hname: hname, comment: comment, price: price, sptype: sptype)
+        img = params[:hotel][:img].read
+        hotel = Hotel.new(place: place, hname: hname, comment: comment, price: price, sptype: sptype, img: img)
         if hotel.save
             redirect_to root_path
         else
@@ -25,5 +26,10 @@ class HotelsController < ApplicationController
         hotel = Hotel.find(params[:id])
         hotel.destroy
         redirect_to root_path
+    end
+    
+    def get_image
+        hotel = Hotel.find(params[:id])
+        send_data hotel.img, disposition: :inline, type: 'image/png'
     end
 end

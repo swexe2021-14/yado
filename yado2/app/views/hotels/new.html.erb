@@ -9,7 +9,8 @@
     <%= f.text_field :sptype %>
     <%= f.label :comment,'紹介文'%>
     <%= f.text_field :comment%>
-    
+    <%= f.label :img, 'イメージ'%>
+    <%= f.file_field :img %>
     <%= f.submit"登録"%>
     
 <% end %>
