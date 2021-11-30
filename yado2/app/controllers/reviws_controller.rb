@@ -1,2 +1,0 @@
-class ReviwsController < ApplicationController
-end

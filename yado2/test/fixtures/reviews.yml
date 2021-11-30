@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rcomment: MyText
+  star: 1
+  tourist_id: 1
+  hotel_id: 1
+
+two:
+  rcomment: MyText
+  star: 1
+  tourist_id: 1
+  hotel_id: 1
