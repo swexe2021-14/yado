@@ -25,7 +25,7 @@ class HotelsController < ApplicationController
     def destroy
         hotel = Hotel.find(params[:id])
         hotel.destroy
-        redirect_to root_path
+        redirect_to hotels_path
     end
     
     def get_image
