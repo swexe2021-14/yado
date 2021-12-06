@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_26_111351) do
+ActiveRecord::Schema.define(version: 2021_11_30_123932) do
 
   create_table "hotels", force: :cascade do |t|
     t.string "place"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2021_11_26_111351) do
     t.text "comment"
     t.integer "price"
     t.string "sptype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "rcomment"
+    t.integer "star"
+    t.integer "tourist_id"
+    t.integer "hotel_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

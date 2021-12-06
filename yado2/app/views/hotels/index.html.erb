@@ -1,18 +1,19 @@
 <h2>ようこそユーザーさん</h2>
 <h1>宿ログ</h1>
 <h2>九州のおすすめ温泉宿を検索できます</h2>
-<>
 <% @hotels.each do |hotel| %>
 <p>
-    <%= link_to hotel.hname , "/hotels/#{hotel.id}" %>
-    
-    <%= hotel.place %>
+    温泉旅館:<%= link_to hotel.hname , "/hotels/#{hotel.id}" %>
     <br>
-    <%= hotel.comment %>
+    所在地:<%= hotel.place %>
     </br>
-    <%= hotel.price %>
-    <p>温泉の特徴:   <%= hotel.sptype %></p>
+    1泊/<%= hotel.price %>円
+    <br>
     <%= image_tag "/get_image/#{hotel.id}" %>
+    </br>
+     <%= hotel.comment %>
+    <p>温泉の特徴:   <%= hotel.sptype %></p>
+    <br>
     <%= link_to'削除',"/hotels/#{hotel.id}", method: :delete %>
     <% end %>
 </p>

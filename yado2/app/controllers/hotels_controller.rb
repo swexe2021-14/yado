@@ -16,7 +16,7 @@ class HotelsController < ApplicationController
         img = params[:hotel][:img].read
         hotel = Hotel.new(place: place, hname: hname, comment: comment, price: price, sptype: sptype, img: img)
         if hotel.save
-            redirect_to root_path
+            redirect_to hotels_path
         else
             render'new'
         end
