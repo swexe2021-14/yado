@@ -1,0 +1,21 @@
+<p>
+   <strong>宿ログ</strong>
+   <br>
+   温泉宿:<%= @hotel.hname %>
+</p>
+
+<p>
+    <strong>所在地</strong>
+    <%= @hotel.place %>県
+    <br>
+    <strong></strong>
+    <%= @hotel.price %>円
+    <br>
+    <strong><%= @hotel.hname %>画像</strong>
+    <br>
+    <%= image_tag "/get_image/#{@hotel.id}" %>
+    <br>
+    <strong>旅館からのコメント</strong>
+    <%= @hotel.comment %>
+    
+</p>

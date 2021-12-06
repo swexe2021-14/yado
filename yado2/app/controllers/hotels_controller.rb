@@ -32,4 +32,8 @@ class HotelsController < ApplicationController
         hotel = Hotel.find(params[:id])
         send_data hotel.img, disposition: :inline, type: 'image/png'
     end
+    
+    def show
+       @hotel = Hotel.find(params[:id]) 
+    end
 end
