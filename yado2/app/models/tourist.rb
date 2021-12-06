@@ -1,2 +1,3 @@
 class Tourist < ApplicationRecord
+
 end
