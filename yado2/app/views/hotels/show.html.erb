@@ -9,13 +9,18 @@
     <%= @hotel.place %>県
     <br>
     <strong></strong>
-    <%= @hotel.price %>円
+    一泊<%= @hotel.price %>円
     <br>
     <strong><%= @hotel.hname %>画像</strong>
     <br>
     <%= image_tag "/get_image/#{@hotel.id}" %>
     <br>
     <strong>旅館からのコメント</strong>
+    <br>
     <%= @hotel.comment %>
+    <br>
     
+    <h1>お客様の声</h1>
+    <hr>
+    <%= link_to'レビューを書く',new_review_path %>
 </p>
