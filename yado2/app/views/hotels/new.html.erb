@@ -1,16 +1,23 @@
 <%= form_for @hotel, url: {action: :create} do |f| %>
-    <%= f.label :hname,'ホテル名'%>
-    <%= f.text_field :hname%>
-    <%= f.label :place,'県'%>
-    <%= f.text_field :place%>
-    <%= f.label :price,'価格'%>
-    <%= f.text_field :price%>
+    <%= f.label :hname,'ホテル名　'%>
+    <%= f.text_field :hname %><br>
+    <%= f.label :place,'　県　　　'%>
+    <%= f.select :place,['福岡','佐賀','長崎','大分','熊本','宮崎','鹿児島'] %><br>
+    <%= f.label :price,'　価格　　'%>
+    <%= f.text_field :price %><br>
     <%= f.label :sptype,'温泉の特徴'%>
-    <%= f.text_field :sptype %>
-    <%= f.label :comment,'紹介文'%>
-    <%= f.text_field :comment%>
-    <%= f.label :img, 'イメージ'%>
-    <%= f.file_field :img %>
-    <%= f.submit"登録"%>
+    
+    
+    <%= check_box_tag :sptype %>
+    <%= label_tag :sptype, "絶景" %>
+    <%= f.check_box :sptype %>
+    <%= f.label :sptype, "ツルツル" %><br>
+
+
+    <%= f.label :comment,'　紹介文　'%>
+    <%= f.text_field :comment %><br>
+    <%= f.label :img, 'イメージ　'%>
+    <%= f.file_field :img %><br>
+    <%= f.submit"登録" %>
     
 <% end %>
