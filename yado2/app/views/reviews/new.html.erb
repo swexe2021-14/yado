@@ -1,0 +1,5 @@
+<%= form_for @review, url: {action: :create} do |f| %>
+    <%= f.label :rcomment, 'お客様の声'%>
+    <%= f.text_field :rcomment %>
+    <%= f.submit"登録"%>
+<% end %>
