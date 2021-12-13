@@ -18,9 +18,20 @@
     <strong>旅館からのコメント</strong>
     <br>
     <%= @hotel.comment %>
+</p>
+<hr>
+<p>
+    <strong>お客様の声</strong>
     <br>
-    
-    <h1>お客様の声</h1>
-    <hr>
-    <%= link_to'レビューを書く',new_review_path %>
+    <% @hotel.reviews.each do |e| %>
+        <p>
+            コメント: <%= e.rcomment %>, 
+            評価: <%= e.star %>, 
+            投稿者: <%= Tourist.find(e.tourist_id).name %>
+        </p>
+    <% end %>
+</p>
+<hr>
+<p>
+    <%= link_to 'レビューを投稿する', new_review_path(hotel_id: @hotel.id) %>
 </p>

@@ -1,5 +1,31 @@
-<%= form_for @review, url: {action: :create} do |f| %>
-    <%= f.label :rcomment, 'お客様の声'%>
-    <%= f.text_field :rcomment %>
-    <%= f.submit"登録"%>
+<% 
+    if @review.errors.present?
+        @review.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
 <% end %>
+
+
+<%= form_for @review, url: {action: :create} do |f| %>
+    <p>'ホテル名： <%= Hotel.find(@review.hotel_id).hname %></p>
+    <%= f.hidden_field :hotel_id %>
+    <p>投稿者： <%= Tourist.find(current_tourist.id).name %></p>
+    <%= f.hidden_field :tourist_id %>
+    <p><%= f.label :rcomment, 'コメント' %>
+    <%= f.text_field :rcomment %></p>
+    <%= f.label :star, '1', value: 1 %>
+    <%= f.radio_button :star, '1' %>
+    <%= f.label :star, '2', value: 2 %>
+    <%= f.radio_button :star, '2' %>
+    <%= f.label :star, '3', value: 3 %>
+    <%= f.radio_button :star, '3' %>
+    <%= f.label :star, '4', value: 4 %>
+    <%= f.radio_button :star, '4' %>
+    <%= f.label :star, '5', value: 5 %>
+    <%= f.radio_button :star, '5' %>
+    </p>
+    <p><%= f.submit 'コメントを登録する' %></p>
+    
+    <%= %>
+<% end %>
+
