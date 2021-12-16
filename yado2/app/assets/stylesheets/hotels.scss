@@ -1,3 +1,21 @@
 // Place all the styles related to the Hotels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.image { /* indexにあるホテルの画像の大きさをそろえた */
+    width: 500px;   /* 横幅を変更 */
+    height: 250px;  /* 縦幅を変更 */
+    object-fit: cover;
+}
+
+.main { /* indexで表示されるホテル情報をカラム化しようとした*/
+/*     column-count: 2;
+    column-rule-style: solid;
+    column-rule-width: 0.5px; */ 
+}
+
+.flex { /* 画像の横に文字を配置 */
+
+    
+}

@@ -1,21 +1,20 @@
 <p>
-   <strong>宿ログ</strong>
+<%= image_tag "yado.jpeg", class: 'img' %>
+<h2>九州のおすすめ温泉宿を検索できます</h2>
+<%= link_to 'ログアウト', top_logout_path %><br><hr>
+
    <br>
-   温泉宿:<%= @hotel.hname %>
 </p>
+    <%= image_tag "/get_image/#{@hotel.id}" , class: 'image' %><br>
 
 <p>
+   温泉宿:<%= @hotel.hname %><br>
     <strong>所在地</strong>
     <%= @hotel.place %>県
     <br>
-    <strong></strong>
+    <strong>値段</strong>
     <%= @hotel.price %>円
-    <br>
-    <strong><%= @hotel.hname %>画像</strong>
-    <br>
-    <%= image_tag "/get_image/#{@hotel.id}" %>
     <br>
     <strong>旅館からのコメント</strong>
     <%= @hotel.comment %>
-    
 </p>
