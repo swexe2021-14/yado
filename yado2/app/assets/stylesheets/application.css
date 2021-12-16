@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.img { /* 大きさをそろえた */
+    width: 50%;   /* 横幅を変更 */
+    height: 50%;  /* 縦幅を変更 */
+}
