@@ -18,4 +18,12 @@ class ReviewsController < ApplicationController
         end
        
     end
+    
+    def destroy
+        review = Review.find(params[:id])
+        hotel_id =review.hotel_id
+        review.destroy
+        redirect_to controller: :hotels, action: :show, id: hotel_id
+    end
+    
 end

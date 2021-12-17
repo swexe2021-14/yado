@@ -34,12 +34,21 @@
             コメント: <%= e.rcomment %>, 
             評価: <%= e.star %>, 
             投稿者: <%= Tourist.find(e.tourist_id).name %>
+            <% if e.tourist_id == current_tourist.id %>
+                <%= link_to '削除' , review_path(e), method: :delete %>
+            <% end %>
         </p>
     <% end %>
 </p>
 <hr>
 <p>
     <%= link_to 'レビューを投稿する', new_review_path(hotel_id: @hotel.id) %>
+<<<<<<< HEAD
 =======
 >>>>>>> M
 </p>
+=======
+    <%= link_to 'TOPに戻る', :action => 'index' %>
+</p>
+
+>>>>>>> 1216A
