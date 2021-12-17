@@ -3,15 +3,12 @@
 <h2>九州のおすすめ温泉宿を検索できます</h2>
 
 <%= form_tag top_login_path, method: :post do %>
-  <center>
     <%= label_tag :name, 'ユーザ名' %>
     <%= text_field_tag :name %> 
     <%= label_tag :pass, 'パスワード' %> 
     <%= password_field_tag :pass %> 
     <%= submit_tag 'ログイン' %>
-  </center> 
 <% end %>
 <pre>
-  <br>                                                                         ↓アカウントを持っていない人はこちらから↓<br>
-                                                                                       <%= link_to 'ユーザー登録', "/tourists/new" %>
-</pre>  
+  <br>↓アカウントを持っていない人はこちらから↓<br>
+  <%= link_to 'ユーザー登録', "/tourists/new" %>

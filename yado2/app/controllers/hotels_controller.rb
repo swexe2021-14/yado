@@ -36,4 +36,10 @@ class HotelsController < ApplicationController
     def show
        @hotel = Hotel.find(params[:id]) 
     end
+    
+    def search
+        @hotels = Hotel.search(params[:keyword])
+        @keyword = params[:keyword]
+        render "index"
+    end
 end

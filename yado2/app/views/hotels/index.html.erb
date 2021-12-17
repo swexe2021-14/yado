@@ -1,8 +1,15 @@
 <%= image_tag "yado.jpeg", class: 'img' %>
 <h2>九州のおすすめ温泉宿を検索できます</h2>
-<%= link_to 'ログアウト', top_logout_path %>　　　
+<%= link_to 'ログアウト', top_logout_path %>　
 <%= link_to'宿を登録', new_hotel_path %>
-<div class = "main">
+
+<div class="search-form">
+    <%= form_with url: search_path ,method: :get, local: true do |f| %>
+        <%= f.text_field :keyword, value: @keyword %>
+        <%= f.submit "検索" %>
+    <% end %>
+</div>
+<div class ="hotel-list">
 <% @hotels.each do |hotel| %>
 <p>
     <hr>
@@ -16,11 +23,10 @@
 
     1泊/<%= hotel.price %>円
     <br>
-    
-     コメント：<%= hotel.comment %><br>
-    温泉の特徴:   <%= hotel.sptype %>
+    コメント：<%= hotel.comment %><br>
     </div>
-    
+    温泉の特徴:   <%= hotel.sptype %>
+    <br>
     <%= link_to'削除',"/hotels/#{hotel.id}", method: :delete %>
     <% end %>
 </p>

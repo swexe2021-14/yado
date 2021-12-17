@@ -12,21 +12,15 @@
     <strong>所在地</strong>
     <%= @hotel.place %>県
     <br>
-<<<<<<< HEAD
-    <strong></strong>
-    一泊<%= @hotel.price %>円
-=======
     <strong>値段</strong>
-    <%= @hotel.price %>円
->>>>>>> M
-    <br>
+    1泊 / <%= @hotel.price %>円<br>
     <strong>旅館からのコメント</strong>
     <br>
     <%= @hotel.comment %>
-<<<<<<< HEAD
-</p>
-<hr>
-<p>
+    <br>
+    </p>
+    
+    <p>
     <strong>お客様の声</strong>
     <br>
     <% @hotel.reviews.each do |e| %>
@@ -43,12 +37,6 @@
 <hr>
 <p>
     <%= link_to 'レビューを投稿する', new_review_path(hotel_id: @hotel.id) %>
-<<<<<<< HEAD
-=======
->>>>>>> M
 </p>
-=======
     <%= link_to 'TOPに戻る', :action => 'index' %>
 </p>
-
->>>>>>> 1216A

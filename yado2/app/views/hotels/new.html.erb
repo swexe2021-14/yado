@@ -1,5 +1,5 @@
 <%= image_tag "yado.jpeg", class: 'img' %>
-<h2>九州のおすすめ温泉宿を検索できます</h2>
+<h2>九州のおすすめ温泉宿を登録できます</h2>
 
 <%= form_for @hotel, url: {action: :create} do |f| %>
     <%= f.label :hname,'ホテル名　'%>
@@ -8,10 +8,9 @@
     <%= f.select :place,['福岡','佐賀','長崎','大分','熊本','宮崎','鹿児島'] %><br>
     <%= f.label :price,'価格　　　'%>
     <%= f.text_field :price %><br>
-    <%= f.label :sptype,'温泉の特徴'%>
-
     
-    <%= f.check_box 'sptype' , {}, "あ", "" %>つるつる
+    <%= f.label :sptype,'温泉の特徴'%>
+    <%= f.text_field :sptype %>
 
 <br>
     <%= f.label :comment,'紹介文　　'%>
