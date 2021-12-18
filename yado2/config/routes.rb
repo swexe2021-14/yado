@@ -8,5 +8,8 @@ Rails.application.routes.draw do
     get 'get_tourist/:name', to: 'tourist#get_tourist'
     resources :hotels
     get 'get_image/:id', to: 'hotels#get_image'
+    
+    post 'hotels/create'
+    root 'hotelsx#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
