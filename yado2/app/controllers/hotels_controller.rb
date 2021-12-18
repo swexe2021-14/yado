@@ -12,7 +12,9 @@ class HotelsController < ApplicationController
         hname = params[:hotel][:hname]
         comment = params[:hotel][:comment]
         price = params[:hotel][:price]
+        
         sptype = params[:hotel][:sptype]
+        
         img = params[:hotel][:img].read
         hotel = Hotel.new(place: place, hname: hname, comment: comment, price: price, sptype: sptype, img: img)
         if hotel.save
@@ -20,7 +22,9 @@ class HotelsController < ApplicationController
         else
             render'new'
         end
+    
     end
+    
     
     def destroy
         hotel = Hotel.find(params[:id])
