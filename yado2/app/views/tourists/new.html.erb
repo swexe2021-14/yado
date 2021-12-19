@@ -1,15 +1,17 @@
-<center><h2>新規ユーザー登録</h2></center>
+
 <%= image_tag "yado.jpeg", class: 'img' %>
 <h2>九州のおすすめ温泉宿を検索できます</h2>
 
-新規ユーザー登録
+<div class = "lin">
 <%= form_for @tourist, url: {action: :create} do |f| %>
 <center>
-  <%= f.label :name, 'ユーザ名' %> 
-  <%= f.text_field :name %> 
+  <h3>新規ユーザー登録</h3>
+  <%= f.label :name, 'ユーザ名　' %> 
+  <%= f.text_field :name %> <br>
   <%= f.label :pass, 'パスワード' %> 
-  <%= f.password_field :pass %> 
-  <%= f.submit '登録' %><br>
-　<%= link_to '戻る', '/' %>
+  <%= f.password_field :pass %><br>
+　<%= link_to '戻る', '/' %>　　
+  <%= f.submit '登録' %>
 </center>
 <% end %>
+</div>

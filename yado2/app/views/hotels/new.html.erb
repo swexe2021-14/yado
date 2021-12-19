@@ -8,20 +8,15 @@
     <%= f.select :place,['福岡','佐賀','長崎','大分','熊本','宮崎','鹿児島'] %><br>
     <%= f.label :price,'価格　　　'%>
     <%= f.text_field :price %><br>
-<<<<<<< HEAD
+ 
+    <%= f.label :sptype,'温泉の特徴'%>
+    <%= f.text_field :sptype %><br>
     
-    <%= f.label :sptype,'温泉の特徴'%>
-    <%= f.text_field :sptype %>
-=======
-    <%= f.label :sptype,'温泉の特徴'%>
-        <%= f.text_field :sptype %>
->>>>>>> M
-
-<br>
     <%= f.label :comment,'紹介文　　'%>
     <%= f.text_field :comment %><br>
     <%= f.label :img, 'イメージ　'%>
     <%= f.file_field :img %><br>
+    <%= link_to '戻る', :action => 'index' %>
     <%= f.submit"登録" %>
     
 <% end %>

@@ -2,13 +2,31 @@
 <%= image_tag "yado.jpeg", class: 'img' %>
 <h2>九州のおすすめ温泉宿を検索できます</h2>
 
-<%= form_tag top_login_path, method: :post do %>
-    <%= label_tag :name, 'ユーザ名' %>
-    <%= text_field_tag :name %> 
-    <%= label_tag :pass, 'パスワード' %> 
-    <%= password_field_tag :pass %> 
-    <%= submit_tag 'ログイン' %>
-<% end %>
-<pre>
-  <br>↓アカウントを持っていない人はこちらから↓<br>
-  <%= link_to 'ユーザー登録', "/tourists/new" %>
+<session class = "main">
+  <div class = "lin1">
+    <%= form_tag top_login_path, method: :post do %>
+    <div class = "lin1_1">
+      <h3>宿ログに登録済みの方</h3>
+    </div>
+    <div class = "lin1_2">
+      <%= label_tag :name, 'ユーザ名　' %>
+      <%= text_field_tag :name %> <br>
+      <%= label_tag :pass, 'パスワード' %> 
+      <%= password_field_tag :pass %>　
+      <%= submit_tag 'ログイン' %>
+    </div>
+  <% end %>
+  <pre><br>
+  </div>
+</session>
+
+<session class = "side">
+  <div class = "lin2">
+    <div class = lin2_1>
+      <h3>初めて利用される方</h3>
+    </div>
+    <div class = lin2_2>
+      <%= link_to 'ユーザー登録', "/tourists/new" %>
+    </div>
+  </div>
+</session>

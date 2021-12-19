@@ -1,3 +1,65 @@
-// Place all the styles related to the Top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.lin1 {/*登録済みのほう*/
+    /*background:#fff8dc; /*背景色*/
+    border: 2px solid;
+    border-color: #dcdcdc; /*枠線の色*/
+    width: 350px;
+    height: 150px;
+    padding: 5px 70px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lin1_1 {
+    /*background: #ffff00;
+    width: 350px;
+    height: 150px;
+    padding: 5px 70px;*/
+}
+
+.lin1_2 {
+    font-weight:800; /*文字の太さ*/
+    
+}
+
+.lin2 {/*初めてのほう*/
+    border: 2px solid;
+    border-color: #dcdcdc;
+    width: 350px;
+    height: 150px;
+    padding: 5px 70px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lin2_1 {
+    /*background: #ff4500;
+*/}
+
+.lin2_2 a{
+    border: 3px solid;
+    border-color: #87cefa;
+    width: 175px;
+    border-radius:30px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 40px; /*上下の空白*/
+    font-weight:800; /*文字の太さ*/
+    text-align:center;/**文字中央*/
+    
+    display: block;
+}
+
+.lin2_2:hover {
+    background-color: #00bfff;
+    border-color: #87cefa;
+    width: 180px;
+    border-radius:30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lin2_2 a:hover {
+    color : white;
+}

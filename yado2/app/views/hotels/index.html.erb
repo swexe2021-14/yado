@@ -3,10 +3,12 @@
 <%= link_to 'ログアウト', top_logout_path %>　
 <%= link_to'宿を登録', new_hotel_path %>
 
-<div class="search-form">
+<div href="#"class="search-form">
     <%= form_with url: search_path ,method: :get, local: true do |f| %>
-        <%= f.text_field :keyword, value: @keyword %>
-        <%= f.submit "検索" %>
+        <%= f.text_field :keyword, value: @keyword, placeholder: "温泉の特徴を検索できます" %>
+        <%= f.submit "検索" %>　▶
+        <%= link_to '検索リセット', :action => 'index' %>
+        
     <% end %>
 </div>
 <div class ="hotel-list">
@@ -23,13 +25,7 @@
 
     1泊/<%= hotel.price %>円
     <br>
-<<<<<<< HEAD
     コメント：<%= hotel.comment %><br>
-=======
-    
-     コメント：<%= hotel.comment %><br>
-    温泉の特徴: <%= hotel.sptype %>
->>>>>>> M
     </div>
     温泉の特徴:   <%= hotel.sptype %>
     <br>
